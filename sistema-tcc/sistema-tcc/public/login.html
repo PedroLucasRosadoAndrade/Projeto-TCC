@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TCC+ | Afya Ji-Paraná</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+  <main class="tela">
+    <aside class="lado-marca">
+      <div class="logo">TCC+</div>
+      <div class="marca-texto">
+        <h1>Gestão de Trabalhos de Conclusão de Curso</h1>
+        <p>Proposta, orientação, banca e arquivamento em um único lugar, do início ao fim.</p>
+      </div>
+      <div class="marca-rodape">Afya Centro Universitário de Ji-Paraná</div>
+    </aside>
+
+    <section class="lado-form">
+      <div class="caixa">
+
+        <!-- Acesse sua conta -->
+        <form id="v-login" class="visao" novalidate>
+          <h2>Acesse sua conta</h2>
+          <p class="sub">Entre com seu email formal ou institucional para continuar</p>
+          <div class="erro" id="erro-login" role="alert" hidden></div>
+
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" autocomplete="username" required>
+
+          <label for="senha">Senha</label>
+          <input id="senha" name="senha" type="password" autocomplete="current-password" required>
+          <a class="link-direita" href="#/esqueci">Esqueci minha senha</a>
+
+          <button type="submit" class="botao">Entrar</button>
+          <p class="nota">Ainda não tem acesso? Fale com a coordenação</p>
+        </form>
+
+        <!-- Esqueceu sua senha? -->
+        <form id="v-esqueci" class="visao" novalidate hidden>
+          <h2>Esqueceu sua senha?</h2>
+          <p class="sub">Informe seu email e enviaremos um link para criar nova senha.</p>
+          <div class="erro" id="erro-esqueci" role="alert" hidden></div>
+
+          <label for="email-esqueci">E-mail</label>
+          <input id="email-esqueci" name="email" type="email" autocomplete="email" required>
+
+          <button type="submit" class="botao">Enviar link de recuperação</button>
+          <a class="link-centro" href="#/login">Voltar para o login</a>
+          <p class="nota">Ainda não tem acesso? Fale com a coordenação</p>
+        </form>
+
+        <!-- Verifique seu email -->
+        <div id="v-enviado" class="visao" hidden>
+          <div class="icone-envio" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg>
+          </div>
+          <h2>Verifique seu email</h2>
+          <p class="sub">Se o seu e-mail estiver cadastrado, você receberá o link em alguns minutos.</p>
+          <ol class="passos">
+            <li>Abra o email enviado.</li>
+            <li>Clique no link para criar uma nova senha.</li>
+            <li>O link vale por 30 minutos.</li>
+          </ol>
+          <a class="botao botao-link" href="#/login">Voltar para o login</a>
+          <p class="nota">Não recebeu? Confira o spam ou <button type="button" class="link-botao" id="reenviar">envie novamente</button></p>
+          <div class="erro" id="erro-enviado" role="alert" hidden></div>
+        </div>
+
+        <!-- Criar nova senha (link do e-mail) -->
+        <form id="v-redefinir" class="visao" novalidate hidden>
+          <h2>Crie uma nova senha</h2>
+          <p class="sub">Use ao menos 8 caracteres, com letras e números.</p>
+          <div class="erro" id="erro-redefinir" role="alert" hidden></div>
+
+          <label for="nova">Nova senha</label>
+          <input id="nova" name="nova" type="password" autocomplete="new-password" required minlength="8">
+
+          <label for="confirma">Confirme a nova senha</label>
+          <input id="confirma" name="confirma" type="password" autocomplete="new-password" required minlength="8">
+
+          <button type="submit" class="botao">Salvar nova senha</button>
+          <a class="link-centro" href="#/login">Voltar para o login</a>
+        </form>
+
+      </div>
+    </section>
+  </main>
+  <script type="module" src="/js/login.js"></script>
+</body>
+</html>

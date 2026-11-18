@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turmas de TCC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="brand"><span class="brand-mark">◆</span><span>Portal TCC</span></div>
+        <nav class="main-nav" aria-label="Navegação principal">
+            <a href="#">◉<small>Conta</small></a>
+            <a href="#">⌂<small>Painel de controle</small></a>
+            <a class="active" href="#">▦<small>Turmas</small></a>
+            <a href="#">▣<small>TCCs</small></a>
+            <a href="#">♧<small>Bancas</small></a>
+            <a href="#">♙<small>Usuários</small></a>
+            <a href="#">☷<small>Períodos</small></a>
+            <a href="#">▥<small>Relatórios</small></a>
+            <a href="#">▦<small>Calendário</small></a>
+            <a href="#">▤<small>Caixa de entrada</small></a>
+            <a href="#">◷<small>Histórico</small></a>
+            <a href="#">？<small>Ajuda</small></a>
+        </nav>
+        <button class="mobile-menu" aria-label="Abrir menu">☰</button>
+    </header>
+
+    <main class="page">
+        <div class="quick-links">
+            <a href="#">▣ &nbsp; Regulamento do TCC</a>
+            <a href="#">◉ &nbsp; Modelos e normas ABNT</a>
+            <a href="#">◎ &nbsp; Meus dados (LGPD)</a>
+        </div>
+
+        <div class="breadcrumb">Início / Turmas</div>
+        <div class="heading-row">
+            <div>
+                <h1>Turmas de TCC (Curso e Semestre)</h1>
+                <p class="subtitle">Gerencie as turmas, períodos letivos e os trabalhos de conclusão de curso.</p>
+            </div>
+            <div class="heading-actions">
+                <button class="btn primary" data-modal="turma">＋ Nova turma de TCC</button>
+                <button class="btn outline" data-modal="periodo">＋ Novo período</button>
+            </div>
+        </div>
+
+        <section class="panel">
+            <div class="panel-heading">
+                <div>
+                    <h2>Turmas de TCC (Curso + Data/Semestre)</h2>
+                    <p>Crie turmas por curso e semestre (ex.: 2026.2) e adicione os TCCs de cada aluno dentro da turma.
+                    </p>
+                </div>
+                <button class="btn primary compact" data-modal="turma">＋ Criar turma</button>
+            </div>
+            <div class="cards-grid" id="turmasGrid">
+                <article class="class-card selected">
+                    <div class="card-top"><span class="eyebrow">CIÊNCIA DA COMPUTAÇÃO (CC)</span><span
+                            class="semester">2026.2</span></div>
+                    <h3>Ciência da Computação — 2026.2</h3>
+                    <p>Turma vigente de TCC1 e TCC2 de Ciência da Computação</p>
+                    <div class="pills"><span class="pill gray">4 TCC(s)</span><span class="pill blue">TCC 1:
+                            1</span><span class="pill purple">TCC 2: 3</span></div>
+                    <div class="card-actions"><button class="btn mini primary">▣ Turma aberta</button><button
+                            class="btn mini outline" data-modal="tcc">＋ Adicionar TCC</button></div>
+                    <div class="icon-actions"><button title="Editar turma">✎</button><button
+                            title="Excluir turma">▤</button></div>
+                </article>
+                <article class="class-card">
+                    <div class="card-top"><span class="eyebrow">ENGENHARIA DE SOFTWARE (ES)</span><span
+                            class="semester">2026.2</span></div>
+                    <h3>Engenharia de Software — 2026.2</h3>
+                    <p>Turma vigente de TCC1 e TCC2 de Engenharia de Software</p>
+                    <div class="pills"><span class="pill gray">2 TCC(s)</span><span class="pill blue">TCC 1:
+                            0</span><span class="pill purple">TCC 2: 2</span></div>
+                    <div class="card-actions"><button class="btn mini outline">▣ Abrir turma</button><button
+                            class="btn mini outline" data-modal="tcc">＋ Adicionar TCC</button></div>
+                    <div class="icon-actions"><button title="Editar turma">✎</button><button
+                            title="Excluir turma">▤</button></div>
+                </article>
+                <article class="class-card">
+                    <div class="card-top"><span class="eyebrow">SISTEMAS DE INFORMAÇÃO (SI)</span><span
+                            class="semester">2026.2</span></div>
+                    <h3>Sistemas de Informação — 2026.2</h3>
+                    <p>Turma vigente de TCC1 e TCC2 de Sistemas de Informação</p>
+                    <div class="pills"><span class="pill gray">2 TCC(s)</span><span class="pill blue">TCC 1:
+                            1</span><span class="pill purple">TCC 2: 1</span></div>
+                    <div class="card-actions"><button class="btn mini outline">▣ Abrir turma</button><button
+                            class="btn mini outline" data-modal="tcc">＋ Adicionar TCC</button></div>
+                    <div class="icon-actions"><button title="Editar turma">✎</button><button
+                            title="Excluir turma">▤</button></div>
+                </article>
+                <article class="class-card">
+                    <div class="card-top"><span class="eyebrow">CIÊNCIA DA COMPUTAÇÃO (CC)</span><span
+                            class="semester">2026.1</span></div>
+                    <h3>Ciência da Computação — 2026.1</h3>
+                    <p>Turma concluída 2026.1</p>
+                    <div class="pills"><span class="pill gray">1 TCC(s)</span><span class="pill blue">TCC 1:
+                            0</span><span class="pill purple">TCC 2: 1</span></div>
+                    <div class="card-actions"><button class="btn mini outline">▣ Abrir turma</button><button
+                            class="btn mini outline" data-modal="tcc">＋ Adicionar TCC</button></div>
+                    <div class="icon-actions"><button title="Editar turma">✎</button><button
+                            title="Excluir turma">▤</button></div>
+                </article>
+                <article class="class-card">
+                    <div class="card-top"><span class="eyebrow">ENGENHARIA DE SOFTWARE (ES)</span><span
+                            class="semester">2026.1</span></div>
+                    <h3>Engenharia de Software — 2026.1</h3>
+                    <p>Turma concluída 2026.1</p>
+                    <div class="pills"><span class="pill gray">1 TCC(s)</span><span class="pill blue">TCC 1:
+                            0</span><span class="pill purple">TCC 2: 1</span></div>
+                    <div class="card-actions"><button class="btn mini outline">▣ Abrir turma</button><button
+                            class="btn mini outline" data-modal="tcc">＋ Adicionar TCC</button></div>
+                    <div class="icon-actions"><button title="Editar turma">✎</button><button
+                            title="Excluir turma">▤</button></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="panel students-panel">
+            <div class="students-heading">
+                <div>
+                    <h2>Dentro da Turma: Ciência da Computação — 2026.2 <span class="semester">2026.2</span> <span
+                            class="pill gray">Ciência da Computação</span></h2>
+                    <p>Gerencie os TCCs dos alunos desta turma, alterne a tag TCC1 / TCC2, atribua Tag: Avaliador e
+                        agende bancas para alunos em TCC2.</p>
+                </div>
+                <div class="table-actions">
+                    <select id="stageFilter" aria-label="Filtrar etapa">
+                        <option value="all">Todas as tags (TCC1 e TCC2)</option>
+                        <option value="TCC 1">TCC 1</option>
+                        <option value="TCC 2">TCC 2</option>
+                    </select>
+                    <button type="button" class="btn primary compact" data-modal="tcc">＋ Adicionar TCC de aluno na
+                        turma</button>
+                </div>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Aluno</th>
+                            <th>Tag (TCC1 / TCC2)</th>
+                            <th>Título do TCC</th>
+                            <th>Orientador</th>
+                            <th>Tag Avaliador (no TCC)</th>
+                            <th>Status</th>
+                            <th>Ações da Coordenação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentRows">
+                        <tr data-stage="TCC 2">
+                            <td><strong>Ana Souza</strong><small>202200001</small></td>
+                            <td><span class="pill purple">TCC 2</span><br><button class="tiny-link">Mudar p/
+                                    TCC1</button></td>
+                            <td><strong class="pink-text">Detecção de Fraudes em Transações Financeiras com Aprendizado
+                                    de Máquina</strong><small>Inteligência Artificial</small></td>
+                            <td>Prof. Carlos Silva</td>
+                            <td><small>Sem avaliadores</small><button class="tiny-link">＋ Tag Avaliador</button></td>
+                            <td><span class="status review">Em revisão</span></td>
+                            <td><button class="btn mini outline">♧ Abrir</button><button class="btn mini danger">▣
+                                    Marcar Defesa</button></td>
+                        </tr>
+                        <tr data-stage="TCC 2">
+                            <td><strong>Diego Ferreira</strong><small>202200004</small></td>
+                            <td><span class="pill purple">TCC 2</span><br><button class="tiny-link">Mudar p/
+                                    TCC1</button></td>
+                            <td><strong class="pink-text">Análise de Vulnerabilidades em Dispositivos IoT
+                                    Residenciais</strong><small>Redes e Segurança</small></td>
+                            <td>Prof. Roberto Lima</td>
+                            <td>
+                                <div class="tag-list"><span class="tag">Prof. Roberto Lima</span><span class="tag">Dra.
+                                        Juliana Prado</span><span class="tag">Prof. Carlos Silva</span><span
+                                        class="tag">Profa. Fernanda Alves</span></div><button class="tiny-link">＋ Tag
+                                    Avaliador</button>
+                            </td>
+                            <td><span class="status waiting">Aguardando banca</span></td>
+                            <td><button class="btn mini outline">♧ Abrir</button><button class="btn mini outline">♧ Ver
+                                    Defesa</button></td>
+                        </tr>
+                        <tr data-stage="TCC 2">
+                            <td><strong>Felipe Araújo</strong><small>202200006</small></td>
+                            <td><span class="pill purple">TCC 2</span><br><button class="tiny-link">Mudar p/
+                                    TCC1</button></td>
+                            <td><strong class="pink-text">Uma Linguagem de Domínio Específico para Descrição de Fluxos
+                                    de Trabalho Acadêmicos</strong><small>Compiladores e Linguagens</small></td>
+                            <td>Prof. Paulo Nunes</td>
+                            <td>
+                                <div class="tag-list"><span class="tag">Prof. Paulo Nunes</span><span class="tag">Prof.
+                                        Carlos Silva</span><span class="tag">Prof. Roberto Lima</span></div><button
+                                    class="tiny-link">＋ Tag Avaliador</button>
+                            </td>
+                            <td><span class="status approved">Aprovado c/ ressalvas</span></td>
+                            <td><button class="btn mini outline">♧ Abrir</button><button class="btn mini outline">♧ Ver
+                                    Defesa</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- GERENCIAMENTO DE PERÍODOS -->
+        <section class="panel periods-panel">
+            <article class="period-card active-period">
+                <div class="period-heading">
+                    <div class="period-title">Período 2026/2 <span class="period-status">Ativo</span></div>
+                    <div class="period-actions">
+                        <button type="button" class="btn outline period-btn">▦ Modificar calendário</button>
+                        <button type="button" class="btn outline period-btn">✎ Editar / cronograma</button>
+                    </div>
+                </div>
+                <p class="period-range">09/08/2026 a 22/12/2026</p>
+                <div class="milestones-grid">
+                    <div class="milestone"><span>Proposta / pré-projeto</span><strong>12/11/2026 <em>22
+                                dias</em></strong></div>
+                    <div class="milestone"><span>Versão parcial</span><strong>04/11/2026 <em>14 dias</em></strong></div>
+                    <div class="milestone"><span>Versão final</span><strong>20/11/2026 <em>30 dias</em></strong></div>
+                    <div class="milestone"><span>Limite para realização das bancas</span><strong>07/12/2026 <em>47
+                                dias</em></strong></div>
+                </div>
+            </article>
+
+            <article class="period-card">
+                <div class="period-heading">
+                    <div class="period-title">Período 2026/1</div>
+                    <div class="period-actions">
+                        <button type="button" class="btn outline period-btn">▦ Modificar calendário</button>
+                        <button type="button" class="btn outline period-btn">✎ Editar / cronograma</button>
+                    </div>
+                </div>
+                <p class="period-range">05/02/2026 a 15/07/2026</p>
+                <div class="milestones-grid">
+                    <div class="milestone"><span>Proposta / pré-projeto</span><strong>17/03/2026</strong></div>
+                    <div class="milestone"><span>Versão parcial</span><strong>Sem prazo definido</strong></div>
+                    <div class="milestone"><span>Versão final</span><strong>15/06/2026</strong></div>
+                    <div class="milestone"><span>Limite para realização das bancas</span><strong>05/07/2026</strong>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- GERENCIAMENTO DE CURSOS -->
+        <section class="panel courses-panel">
+            <div class="courses-heading">
+                <h2>Cursos</h2>
+                <button type="button" class="btn primary compact">＋ Novo curso</button>
+            </div>
+            <div class="courses-table-wrap">
+                <table class="courses-table">
+                    <thead>
+                        <tr>
+                            <th>Curso</th>
+                            <th>Sigla</th>
+                            <th>Situação</th>
+                            <th aria-label="Ações"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ciência da Computação</td>
+                            <td>CC</td>
+                            <td>Ativo</td>
+                            <td><button type="button" class="course-edit"
+                                    aria-label="Editar Ciência da Computação">✎</button></td>
+                        </tr>
+                        <tr>
+                            <td>Engenharia de Software</td>
+                            <td>ES</td>
+                            <td>Ativo</td>
+                            <td><button type="button" class="course-edit"
+                                    aria-label="Editar Engenharia de Software">✎</button></td>
+                        </tr>
+                        <tr>
+                            <td>Sistemas de Informação</td>
+                            <td>SI</td>
+                            <td>Ativo</td>
+                            <td><button type="button" class="course-edit"
+                                    aria-label="Editar Sistemas de Informação">✎</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+    <!-- MODAL ANTIGO: NOVA TURMA / PERÍODO -->
+
+    <div class="modal-backdrop" id="modalBackdrop" hidden>
+
+        <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+
+            <button class="modal-close" id="closeModal" aria-label="Fechar">×</button>
+
+            <h2 id="modalTitle">Nova turma</h2>
+
+            <form id="modalForm">
+
+                <label id="fieldLabel" for="modalInput">Nome</label>
+
+                <input id="modalInput" required placeholder="Digite a informação">
+
+                <label for="modalSelect">Curso / etapa</label>
+
+                <select id="modalSelect">
+                    <option>Ciência da Computação</option>
+                    <option>Engenharia de Software</option>
+                    <option>Sistemas de Informação</option>
+                </select>
+
+                <div class="modal-buttons">
+
+                    <button type="button" class="btn outline" id="cancelModal">
+                        Cancelar
+                    </button>
+
+                    <button class="btn primary" type="submit">
+                        Salvar
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </div>
+
+
+    <!-- NOVO MODAL: ADICIONAR TCC -->
+
+    <div class="modal-backdrop" id="addTccModal" hidden>
+
+        <section class="tcc-modal">
+
+            <div class="tcc-modal-header">
+
+                <h2>Adicionar TCC de aluno na turma Ciência da Computação — 2026.2</h2>
+
+                <button type="button" id="closeTccModal">×</button>
+
+            </div>
+
+            <form id="addTccForm">
+
+                <div class="tcc-modal-body">
+
+                    <div class="form-group full">
+                        <label>Como deseja adicionar?</label>
+
+                        <select id="tipoCadastro">
+                            <option value="novo">
+                                Cadastrar novo TCC para um aluno nesta turma
+                            </option>
+
+                            <option value="existente">
+                                Vincular TCC já cadastrado
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full">
+                        <label>Tag do Aluno/Projeto <span>*</span></label>
+
+                        <select id="tagProjeto" required>
+                            <option value="TCC 1">TCC1 — Projeto inicial / qualificação</option>
+                            <option value="TCC 2">TCC2 — Trabalho final / defesa</option>
+                        </select>
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label>Aluno <span>*</span></label>
+
+                            <select id="alunoTcc" required>
+                                <option value="">Selecione o aluno...</option>
+                                <option>Ana Souza</option>
+                                <option>Bruno Reis</option>
+                                <option>Diego Ferreira</option>
+                                <option>Felipe Araújo</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Professor Orientador <span>*</span></label>
+
+                            <select id="orientadorTcc" required>
+                                <option value="">Selecione o orientador...</option>
+                                <option>Prof. Carlos Silva</option>
+                                <option>Prof. Roberto Lima</option>
+                                <option>Prof. Paulo Nunes</option>
+                                <option>Profa. Fernanda Alves</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group full">
+                        <label>Título do TCC <span>*</span></label>
+
+                        <input type="text" id="tituloTcc" placeholder="Título provisório ou definitivo" required>
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label>Área de pesquisa</label>
+
+                            <input type="text" id="areaPesquisa" placeholder="Ex.: Inteligência Artificial">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Palavras-chave</label>
+
+                            <input type="text" id="palavrasChave" placeholder="Separe por vírgulas">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group full">
+                        <label>Resumo / Escopo inicial</label>
+
+                        <textarea id="resumoTcc" rows="4"
+                            placeholder="Resumo do trabalho cadastrado na turma..."></textarea>
+                    </div>
+
+                </div>
+
+                <div class="tcc-modal-footer">
+
+                    <button type="button" class="btn outline" id="cancelTcc">
+                        Cancelar
+                    </button>
+
+                    <button type="submit" class="btn primary">
+                        Adicionar na turma
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </div>
+
+
+    <div class="toast" id="toast" role="status"></div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

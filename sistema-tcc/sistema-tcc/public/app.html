@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TCC+ | Afya Ji-Paraná</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo" id="topo" hidden>
+    <div class="topo-in">
+      <a class="marca" href="#/painel" aria-label="TCC+ — Painel de controle">TCC+ <span>Afya Ji-Paraná</span></a>
+      <button class="btn-menu" id="btn-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"></button>
+      <nav class="menu" id="menu" aria-label="Menu principal"></nav>
+      <div class="topo-usuario">
+        <a class="sino" id="sino" href="#/notificacoes" aria-label="Notificações"></a>
+        <a class="usuario" id="usuario-link" href="#/perfil" title="Meu perfil">
+          <span class="avatar" id="avatar"></span>
+          <span class="usuario-nome" id="usuario-nome"></span>
+        </a>
+        <button class="btn-sair" id="btn-sair" type="button">Sair</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo" class="conteudo" tabindex="-1" aria-live="polite">
+    <p class="carregando">Carregando…</p>
+  </main>
+
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>

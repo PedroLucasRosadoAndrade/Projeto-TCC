@@ -10,7 +10,7 @@ app.use(express.static('public'));
 
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + './public/home.html');
+    res.sendFile(__dirname + './public/HTML/home.html');
 });
 
 app.listen(3601, () => {
